@@ -1,6 +1,8 @@
+import styles from "./footer.module.css";
+
 const Footer = () => {
   return (
-    <div> Footer </div>
+    <footer className={styles.container}> © 2024 All Rights Reserved</footer>
   );
 };
 
