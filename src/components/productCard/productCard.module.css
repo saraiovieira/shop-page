@@ -28,6 +28,53 @@
   gap: 5px;
 }
 
+.cartIcons {
+  position: relative;
+}
+
 .shoppingIcon {
   font-size: 30px;
+}
+
+.addToCartIcon {
+  font-size: 20px;
+  position: absolute;
+  right: 3px;
+  bottom: 0px;
+  color: rgb(26, 23, 23);
+}
+
+.cartControls {
+  display: block;
+}
+
+.quantity {
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.minusIcon,
+.plusIcon,
+.addToCartIcon {
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+.minusIcon:hover,
+.plusIcon:hover {
+  transform: scale(1.2);
+}
+
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
 }
