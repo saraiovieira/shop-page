@@ -1,0 +1,33 @@
+.container {
+  width: 300px;
+  position: relative;
+}
+
+.imgContainer {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  border: 2px solid;
+  margin-bottom: 10px;
+}
+
+.img {
+    object-fit: contain;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shoppingIcon {
+  font-size: 30px;
+}
