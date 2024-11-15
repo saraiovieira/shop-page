@@ -1,0 +1,22 @@
+.container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  width: 200px;
+  height: 24px;
+  position: relative;
+}
+
+.logo {
+    position:absolute;
+}
+
+.shoppingIcon {
+  width: 24px;
+  height: 24px;
+}
