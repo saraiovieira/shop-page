@@ -7,13 +7,13 @@
 
 .logoContainer {
   display: flex;
-  width: 200px;
+  width: 100px;
   height: 24px;
   position: relative;
 }
 
 .logo {
-    position:absolute;
+  position:absolute;
 }
 
 .shoppingIcon {
