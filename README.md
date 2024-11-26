@@ -1,54 +1,71 @@
+# E-Commerce Shop Page
+
 ## About The Project
-This is a simple e-commerce shop page. It allows users to browse products, add them to a cart, and view their cart.
+This project is a simple e-commerce shop page that allows users to browse products, add them to a cart, and manage their shopping cart. It demonstrates clean coding practices, state management using React Context, and scalable design principles.
 
-### Components
-
-- Product Card: Displays product image, name, price, and an "Add to Cart" button.
-- Shopping Cart: Shows a list of added products, their quantities, and a total price.
-
-### Functionality
-
+## Features
+### Implemented Functionality
 - Product Browsing: Users can scroll through the product list.
 - Adding to Cart: Clicking "Add to Cart" adds the product to the cart and updates the cart total.
 - Viewing Cart: Clicking the cart icon opens the cart.
-- Removing from Cart: Clicking the trash button on a item removes it.
+- Removing from Cart: Clicking the trash icon on a item removes it.
   
 ### Technologies 
-Frontend: Used React, Next.js, CSS Modules, Context API
+Frontend: React, Next.js, CSS Modules, React Context.
+
+
+## Key Design Considerations
+Several important design decisions were made to balance simplicity, scalability, and development speed. Here are the primary choices:
+
+#### State Management: React Context vs. Redux
+- Used React Context instead of Redux for state management, specifically for the cart functionality because React Context is simpler to implement and was sufficient for this project’s scale.
+- Redux would introduce more boilerplate and complexity, which was unnecessary for the relatively simple state management needs of the cart.
+
+#### UI Design: Custom CSS vs. Tailwind CSS
+- Skipped integrating a UI library initially to focus on functional features.
+
+## Recent Enhancements
+#### Improved Decision-Making Transparency:
+- Documented trade-offs and prioritization in the development process.
+
+## Future Improvements
+- [ ] Refactor the project to use TypeScript for improved scalability and maintainability.
+- [ ] Integrate Tailwind CSS to enhance styling and responsiveness
+- [ ] Enhance test coverage with unit and integration tests.
+- [ ] Add advanced functionality such as product filtering and sorting.
 
 ## Run Project
-
-Clone the project
+1. Clone the project
 
 ```bash
   git clone https://saraiovieira/shop-page.git
 ```
 
-Go to the project directory
+2. Go to the project directory
 
 ```bash
   cd shop-page
 ```
 
-Install dependencies
+3. Install dependencies
 
 ```bash
   npm install
 ```
 
-Create a .env file and add a variable with the name API_URL to fetch the data to the page. In my case, I used Kencko API url provided by them.
+4. Create a .env file and add a variable `API_URL` for the data source
+```bash
+API_URL=https://www.kencko.com/api/v1/products/US?shop_domain=vip-kencko.myshopify.com
+```
 
-Run the development server:
+5. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+## Contributions
+- Contributions, issues, and feature requests are welcome! Feel free to fork the repository and submit a pull request.
 
