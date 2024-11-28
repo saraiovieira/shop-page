@@ -1,8 +1,10 @@
 import { Inter } from "next/font/google";
-import { CartProvider } from "@/context/CartContext";
+import CartProvider from "@/context/CartContext";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import { ReactNode } from "react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -10,13 +12,19 @@ export const metadata = {
   description: "A shop page that shows products",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({
+  children,
+}: RootLayoutProps): React.ReactNode {
   return (
     <CartProvider>
       <html lang="en">
         <body className={inter.className}>
           <div className="container">
-            <Navbar  />
+            <Navbar />
             {children}
             <Footer />
           </div>
