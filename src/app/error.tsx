@@ -1,5 +1,3 @@
-import React, { ReactNode } from "react";
-
-export default function Error(): ReactNode {
+export default function Error() {
   return <div>Error</div>;
 }
