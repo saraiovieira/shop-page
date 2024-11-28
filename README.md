@@ -27,9 +27,10 @@ Several important design decisions were made to balance simplicity, scalability,
 ## Recent Enhancements
 #### Improved Decision-Making Transparency:
 - Documented trade-offs and prioritization in the development process.
+- Refactored the project to use TypeScript.
 
 ## Future Improvements
-- [ ] Refactor the project to use TypeScript for improved scalability and maintainability.
+- [x] Refactor the project to use TypeScript for improved scalability and maintainability.
 - [ ] Integrate Tailwind CSS to enhance styling and responsiveness
 - [ ] Enhance test coverage with unit and integration tests.
 - [ ] Add advanced functionality such as product filtering and sorting.
