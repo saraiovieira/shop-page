@@ -1,7 +1,5 @@
 import ProductCard from "@/components/productCard/productCard";
 import styles from "./home.module.css";
-import React from 'react';
-
 interface Product {
   id: string;
   name: string;
@@ -15,33 +13,21 @@ interface Product {
 
 type ProductsResponse = Product[];
 
-const { API_URL } = process.env;
-
 const getData = async (): Promise<ProductsResponse> => {
+  const { API_URL } = process.env;
+
   const res = await fetch(`${API_URL}`, { cache: "no-store" });
 
   if (!res.ok) {
-    throw new Error("Something went wrong");
+    throw new Error("Something went wrong while fetching data");
   }
 
-  return res.json();
+  const products: ProductsResponse = await res.json();
+  return products;
 };
 
-export default function Home(): React.ReactNode {
-  const [products, setProducts] = React.useState<ProductsResponse>([]);
-
-  React.useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const products = await getData();
-        setProducts(products);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+export default async function Home(): Promise<JSX.Element> {
+  const products = await getData();
 
   return (
     <main className={styles.container}>
