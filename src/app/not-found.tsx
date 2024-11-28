@@ -1,6 +1,8 @@
 import Link from "next/link";
+import React, { ReactNode } from "react";
 
-function NotFound() {
+
+export default function NotFound(): ReactNode{
   return (
     <div>
       <h2>Not Found</h2>
@@ -9,5 +11,3 @@ function NotFound() {
     </div>
   );
 }
-
-export default NotFound;
