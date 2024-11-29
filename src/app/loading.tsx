@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
 
-export default function Error(): ReactNode {
-  return <div>Error</div>;
+export default function Loading(): ReactNode {
+  return <div>Loading</div>;
 }
