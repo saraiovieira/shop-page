@@ -25,6 +25,7 @@ interface CartContextValue {
   cart: CartItem[];
   addToCart: (product: CartItem) => void;
   removeFromCart: (productId: string) => void;
+  updateCartQuantity: (productId: string, quantity: number) => void;
 }
 
 const CartContext = createContext<CartContextValue | undefined>(undefined);
@@ -96,8 +97,18 @@ export default function CartProvider({
     });
   };
 
+  const updateCartQuantity = (productId: string, newQuantity: number) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, updateCartQuantity }}
+    >
       {children}
     </CartContext.Provider>
   );
