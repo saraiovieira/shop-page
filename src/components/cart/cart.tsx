@@ -1,16 +1,31 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { HiOutlineShoppingBag, HiTrash } from "react-icons/hi2";
+import {
+  HiOutlineShoppingBag,
+  HiMiniPlusCircle,
+  HiMiniMinusCircle,
+} from "react-icons/hi2";
 import styles from "./cart.module.css";
 import Image from "next/image";
 
 export default function Cart(): ReactNode {
-  const { cart, removeFromCart } = useCart();
-
+  const { cart, updateCartQuantity, removeFromCart } = useCart();
   const isEmptyCart = cart.length === 0;
 
-  const handleRemoveItem = (productId: string) => {
-    removeFromCart(productId);
+  const handleIncrementQuantity = (productId: string) => {
+    const product = cart.find((item) => item.id === productId);
+    if (product) {
+      updateCartQuantity(productId, product.quantity + 1);
+    }
+  };
+
+  const handleDecrementQuantity = (productId: string) => {
+    const product = cart.find((item) => item.id === productId);
+    if (product && product.quantity > 1) {
+      updateCartQuantity(productId, product.quantity - 1);
+    } else {
+      removeFromCart(productId);
+    }
   };
 
   const totalPrice = cart.reduce(
@@ -21,7 +36,6 @@ export default function Cart(): ReactNode {
   return (
     <div className={styles.cartContainer}>
       <h2 className={styles.cartTitle}>Shopping Cart</h2>
-
       {isEmptyCart && (
         <div className={styles.emptyContainer}>
           <HiOutlineShoppingBag className={styles.shoppingIcon} />
@@ -37,7 +51,6 @@ export default function Cart(): ReactNode {
             <ul>
               {cart.map((item) => (
                 <li className={styles.productsContainer} key={item.id}>
-                  <p>{item.name}</p>
                   <div className={styles.imgContainer}>
                     <Image
                       src={item.productPackaging.url}
@@ -46,19 +59,33 @@ export default function Cart(): ReactNode {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className={styles.priceContainer}>
-                    <p>
-                      {new Intl.NumberFormat("en-US", {
-                        style: "currency",
-                        currency: "USD",
-                      }).format(item.market_prices.full_price)}
-                    </p>
-                    <button
-                      className={styles.removeButton}
-                      onClick={() => handleRemoveItem(item.id)}
-                    >
-                      <HiTrash className={styles.removeIcon} />
-                    </button>
+                  <div className={styles.infoContainer}>
+                    <div className={styles.descContainer}>
+                    <div className={styles.nameContainer}>
+                      <p>{item.name}</p>
+                      </div>
+                      <div className={styles.priceContainer}>
+                        <p>
+                          {new Intl.NumberFormat("en-US", {
+                            style: "currency",
+                            currency: "USD",
+                          }).format(item.market_prices.full_price)}
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div className={styles.cartControls}>
+                        <HiMiniMinusCircle
+                          onClick={() => handleDecrementQuantity(item.id)}
+                          className={styles.minusIcon}
+                        />
+                        <span className={styles.quantity}>{item.quantity}</span>
+                        <HiMiniPlusCircle
+                          onClick={() => handleIncrementQuantity(item.id)}
+                          className={styles.plusIcon}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </li>
               ))}
