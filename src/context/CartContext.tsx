@@ -24,8 +24,7 @@ interface CartItem {
 interface CartContextValue {
   cart: CartItem[];
   addToCart: (product: CartItem) => void;
-  removeFromCart: (productId: string) => void;
-  updateCartQuantity: (productId: string, quantity: number) => void;
+  updateItemQuantity: (productId: string, quantity: number) => void;
 }
 
 const CartContext = createContext<CartContextValue | undefined>(undefined);
@@ -61,11 +60,14 @@ export default function CartProvider({
         (item) => item.id === product.id
       );
 
-      if (existingItemIndex !== -1) {
-        updatedCart[existingItemIndex] = {
+      const existingItem = updatedCart[existingItemIndex];
+
+      if (existingItem) {
+        const updatedItem = {
           ...updatedCart[existingItemIndex],
           quantity: updatedCart[existingItemIndex].quantity + 1,
         };
+        updatedCart[existingItemIndex] = updatedItem;
       } else {
         updatedCart.push({ ...product, quantity: 1 });
       }
@@ -75,39 +77,31 @@ export default function CartProvider({
     });
   };
 
-  const removeFromCart = (productId: string) => {
+
+  const updateItemQuantity = (productId: string, quantity: number) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
-      const existingItemIndex = updatedCart.findIndex(
+      const updatedItemIndex = updatedCart.findIndex(
         (item) => item.id === productId
       );
 
-      if (existingItemIndex !== -1) {
-        if (updatedCart[existingItemIndex].quantity > 1) {
-          updatedCart[existingItemIndex] = {
-            ...updatedCart[existingItemIndex],
-            quantity: updatedCart[existingItemIndex].quantity - 1,
-          };
-        } else {
-          updatedCart.splice(existingItemIndex, 1);
-        }
+      let updatedItem =  { ...updatedCart[updatedItemIndex] };
+      updatedItem.quantity += quantity;
+
+      if (updatedItem.quantity <= 0) {
+        updatedCart.splice(updatedItemIndex, 1);
+      } else {
+        updatedCart[updatedItemIndex] = updatedItem;
       }
+
       saveCartToLocalStorage(updatedCart);
       return updatedCart;
     });
   };
 
-  const updateCartQuantity = (productId: string, newQuantity: number) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === productId ? { ...item, quantity: newQuantity } : item
-      )
-    );
-  };
-
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, updateCartQuantity }}
+      value={{ cart, addToCart, updateItemQuantity }}
     >
       {children}
     </CartContext.Provider>

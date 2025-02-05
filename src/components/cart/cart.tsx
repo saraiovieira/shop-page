@@ -9,24 +9,8 @@ import styles from "./cart.module.css";
 import Image from "next/image";
 
 export default function Cart(): ReactNode {
-  const { cart, updateCartQuantity, removeFromCart } = useCart();
+  const { cart, updateItemQuantity } = useCart();
   const isEmptyCart = cart.length === 0;
-
-  const handleIncrementQuantity = (productId: string) => {
-    const product = cart.find((item) => item.id === productId);
-    if (product) {
-      updateCartQuantity(productId, product.quantity + 1);
-    }
-  };
-
-  const handleDecrementQuantity = (productId: string) => {
-    const product = cart.find((item) => item.id === productId);
-    if (product && product.quantity > 1) {
-      updateCartQuantity(productId, product.quantity - 1);
-    } else {
-      removeFromCart(productId);
-    }
-  };
 
   const totalPrice = cart.reduce(
     (acc, item) => acc + item.quantity * item.market_prices.full_price,
@@ -76,12 +60,12 @@ export default function Cart(): ReactNode {
                     <div>
                       <div className={styles.cartControls}>
                         <HiMiniMinusCircle
-                          onClick={() => handleDecrementQuantity(item.id)}
+                          onClick={() => updateItemQuantity(item.id, -1)}
                           className={styles.minusIcon}
                         />
                         <span className={styles.quantity}>{item.quantity}</span>
                         <HiMiniPlusCircle
-                          onClick={() => handleIncrementQuantity(item.id)}
+                          onClick={() => updateItemQuantity(item.id, 1)}
                           className={styles.plusIcon}
                         />
                       </div>
