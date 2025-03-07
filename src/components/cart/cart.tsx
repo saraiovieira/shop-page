@@ -23,16 +23,18 @@ export default function Cart(): ReactNode {
       {isEmptyCart && (
         <div className={styles.emptyContainer}>
           <HiOutlineShoppingBag className={styles.shoppingIcon} />
-          <p className={styles.emptyCartMessage}>
-            Your cart is currently empty. Add some products to get started!
-          </p>
+          <div className={styles.emptyMessageContainer}>
+            <p className={styles.emptyCartMessage}>
+              Your cart is currently empty. Add some products to get started!
+            </p>
+          </div>
         </div>
       )}
 
       {!isEmptyCart && (
         <>
           <div className={styles.cartSummary}>
-            <ul>
+            <ul className={styles.items}>
               {cart.map((item) => (
                 <li className={styles.productsContainer} key={item.id}>
                   <div className={styles.imgContainer}>
@@ -45,8 +47,8 @@ export default function Cart(): ReactNode {
                   </div>
                   <div className={styles.infoContainer}>
                     <div className={styles.descContainer}>
-                    <div className={styles.nameContainer}>
-                      <p>{item.name}</p>
+                      <div className={styles.nameContainer}>
+                        <p>{item.name}</p>
                       </div>
                       <div className={styles.priceContainer}>
                         <p>
