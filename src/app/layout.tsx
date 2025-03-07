@@ -23,6 +23,7 @@ export default function RootLayout({
     <CartProvider>
       <html lang="en">
         <body className={inter.className}>
+          <div id="modal"></div>
           <div className="container">
             <Navbar />
             {children}
