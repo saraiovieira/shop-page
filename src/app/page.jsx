@@ -1,22 +1,8 @@
 import ProductCard from "@/components/productCard/productCard";
 import styles from "./home.module.css";
+import products from "./data.json"; // adjust path if needed
 
-const getData = async () => {
-  const { API_URL } = process.env;
-
-  const res = await fetch(`${API_URL}`, { cache: "no-store" });
-
-  if (!res.ok) {
-    throw new Error("Something went wrong while fetching data");
-  }
-
-  const products = await res.json();
-  return products;
-};
-
-export default async function Home() {
-  const products = await getData();
-
+export default function Home() {
   return (
     <main className={styles.container}>
       {products.map((product) => (

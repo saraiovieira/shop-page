@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import styles from "./navbar.module.css";
@@ -39,7 +38,7 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logoContainer}>
-        <Image src="/kencko-logo.svg" alt="Logo" fill className={styles.logo} />
+        <span className={styles.brandText}>Shop App</span>{" "}
       </Link>
       <div className={styles.cartContainer} onClick={toggleCart}>
         <HiOutlineShoppingBag className={styles.shoppingIcon} />

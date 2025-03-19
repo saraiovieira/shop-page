@@ -1,0 +1,153 @@
+[
+  {
+    "id": "5Ytvr48KskbzAKD7JAyVwn",
+    "name": "Vitamin C Serum",
+    "perks": "brightening",
+    "benefitsIntro": "Revitalize your skin with a powerful serum that brightens complexion, evens skin tone, and boosts collagen production.",
+    "mainFlavors": ["citrus", "orange peel", "vitamin c essence"],
+    "url": "/serums/vitamin-c-serum",
+    "cardDescription": null,
+    "cardHighlightText": null,
+    "productId": "serum__Vitamin_C_Serum",
+    "intro": "Our Vitamin C Serum is formulated with a high concentration of stabilized vitamin C to help reduce dark spots and boost skin radiance, leaving you with a healthy and youthful glow.",
+    "suggestion": "Apply 2-3 drops to clean skin in the morning before moisturizer and sunscreen.",
+    "mixLiquidTwist": "Pair with hyaluronic acid serum for extra hydration boost.",
+    "allergies": "Patch test recommended; for external use only.",
+    "background": {
+      "id": "4O8ajv5qDOfn3FgmVglWMX",
+      "title": "Vitamin C Serum ingredients",
+      "description": "Vitamin C Serum ingredients",
+      "url": "/vitamin-c.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "5c45isYijuaBWfvAu54Kwl",
+      "title": "Vitamin C Serum Bottle",
+      "description": "Vitamin C Serum Bottle",
+      "url": "/vitamin-c.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackagingPdp": {
+      "id": "1QasoyQU9LOSamijkPLsuX",
+      "title": "Vitamin C Serum PDP Image",
+      "description": "Vitamin C Serum product detail page image",
+      "url": "/vitamin-c.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "5jmvz9pSCi2twuA5P6TUCr",
+      "title": "Vitamin C Serum Lifestyle",
+      "description": "Vitamin C Serum next to skincare tools",
+      "url": "/vitamin-c.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "suggestionImage": {
+      "id": "2sWd3DHzk2QgrI5Fkm6Q8f",
+      "title": "Vitamin C Serum application",
+      "description": "",
+      "url": "/vitamin-c.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 90,
+            "height": 65
+          }
+        },
+        "contentType": "image/svg+xml"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Vitamin C",
+        "description": "Brightens the skin and helps reduce the appearance of dark spots and fine lines."
+      },
+      {
+        "name": "Antioxidants",
+        "description": "Protects skin from environmental damage and oxidative stress."
+      },
+      {
+        "name": "Collagen Boost",
+        "description": "Supports natural collagen production for firmer and smoother skin."
+      }
+    ],
+    "ingredients": [
+      "ascorbic acid (vitamin c)",
+      "hyaluronic acid",
+      "aloe vera",
+      "witch hazel",
+      "jojoba oil",
+      "vitamin e",
+      "ferulic acid"
+    ],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["vitamin c", "hyaluronic acid", "vitamin e"],
+    "nutritionalInformation": {
+      "id": "2Z2kpc6kQZ8eg1gkIMc8ol",
+      "description": "Contains 20% stabilized vitamin C with additional hydrating and soothing ingredients.",
+      "nutrientsInfo": {
+        "id": "40RnRfxjdI2L80usd9X9Ij",
+        "title": "Vitamin C Serum Label",
+        "description": "Label with ingredients and usage",
+        "url": "/vitamin-c.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "serum-vitamin-c-serum",
+    "category": "serum",
+    "contentfulEntryId": "5Ytvr48KskbzAKD7JAyVwn",
+    "shopPriority": 55,
+    "product_id": 7608555274434,
+    "variant_id": 42884145381570,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "7608555274434",
+      "rating_average": 4.8,
+      "rating_count": 542
+    },
+    "market_prices": {
+      "full_price": 28.0,
+      "subscription_price": 22.4,
+      "currency": "EUR"
+    }
+  }
+]
