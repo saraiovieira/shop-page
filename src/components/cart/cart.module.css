@@ -32,12 +32,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .productsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .cartSummary {
@@ -66,7 +68,7 @@
 
 .descContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 18px;
   margin-bottom: 10px;

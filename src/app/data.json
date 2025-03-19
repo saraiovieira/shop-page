@@ -1,22 +1,22 @@
 [
   {
-    "id": "5Ytvr48KskbzAKD7JAyVwn",
+    "id": "vit-c-serum-01",
     "name": "Vitamin C Serum",
     "perks": "brightening",
-    "benefitsIntro": "Revitalize your skin with a powerful serum that brightens complexion, evens skin tone, and boosts collagen production.",
-    "mainFlavors": ["citrus", "orange peel", "vitamin c essence"],
-    "url": "/serums/vitamin-c-serum",
-    "cardDescription": null,
-    "cardHighlightText": null,
-    "productId": "serum__Vitamin_C_Serum",
-    "intro": "Our Vitamin C Serum is formulated with a high concentration of stabilized vitamin C to help reduce dark spots and boost skin radiance, leaving you with a healthy and youthful glow.",
-    "suggestion": "Apply 2-3 drops to clean skin in the morning before moisturizer and sunscreen.",
-    "mixLiquidTwist": "Pair with hyaluronic acid serum for extra hydration boost.",
-    "allergies": "Patch test recommended; for external use only.",
+    "benefitsIntro": "Revitalize and brighten your skin with this antioxidant powerhouse for a radiant glow.",
+    "mainFlavors": ["citrus", "orange peel"],
+    "url": "/serums/vitamin-c",
+    "cardDescription": "Boost collagen and combat dullness with daily vitamin C care.",
+    "cardHighlightText": "Bright skin, every day",
+    "productId": "serums__Vitamin_C",
+    "intro": "Formulated with stabilized vitamin C to target uneven skin tone, dullness, and early signs of aging.",
+    "suggestion": "Apply 2-3 drops each morning to clean, dry skin.",
+    "mixLiquidTwist": "Follow with sunscreen for optimal results.",
+    "allergies": "Contains citrus extract; patch test recommended.",
     "background": {
-      "id": "4O8ajv5qDOfn3FgmVglWMX",
-      "title": "Vitamin C Serum ingredients",
-      "description": "Vitamin C Serum ingredients",
+      "id": "bg-vitc-01",
+      "title": "Vitamin C Background",
+      "description": "Orange slices and serum bottle",
       "url": "/vitamin-c.jpg",
       "file": {
         "details": {
@@ -29,9 +29,9 @@
       }
     },
     "productPackaging": {
-      "id": "5c45isYijuaBWfvAu54Kwl",
-      "title": "Vitamin C Serum Bottle",
-      "description": "Vitamin C Serum Bottle",
+      "id": "pkg-vitc-01",
+      "title": "Vitamin C Product Packaging",
+      "description": "Amber glass dropper bottle",
       "url": "/vitamin-c.jpg",
       "file": {
         "details": {
@@ -43,25 +43,10 @@
         "contentType": "image/webp"
       }
     },
-    "productPackagingPdp": {
-      "id": "1QasoyQU9LOSamijkPLsuX",
-      "title": "Vitamin C Serum PDP Image",
-      "description": "Vitamin C Serum product detail page image",
-      "url": "/vitamin-c.jpg",
-      "file": {
-        "details": {
-          "image": {
-            "width": 960,
-            "height": 1200
-          }
-        },
-        "contentType": "image/webp"
-      }
-    },
     "lifeStyleImage": {
-      "id": "5jmvz9pSCi2twuA5P6TUCr",
-      "title": "Vitamin C Serum Lifestyle",
-      "description": "Vitamin C Serum next to skincare tools",
+      "id": "life-vitc-01",
+      "title": "Vitamin C Lifestyle Image",
+      "description": "Serum bottle with citrus",
       "url": "/vitamin-c.jpg",
       "file": {
         "details": {
@@ -71,55 +56,34 @@
           }
         },
         "contentType": "image/webp"
-      }
-    },
-    "suggestionImage": {
-      "id": "2sWd3DHzk2QgrI5Fkm6Q8f",
-      "title": "Vitamin C Serum application",
-      "description": "",
-      "url": "/vitamin-c.jpg",
-      "file": {
-        "details": {
-          "image": {
-            "width": 90,
-            "height": 65
-          }
-        },
-        "contentType": "image/svg+xml"
       }
     },
     "benefits": [
       {
         "name": "Vitamin C",
-        "description": "Brightens the skin and helps reduce the appearance of dark spots and fine lines."
+        "description": "Brightens skin and helps fight free radicals for a healthy glow."
       },
       {
-        "name": "Antioxidants",
-        "description": "Protects skin from environmental damage and oxidative stress."
-      },
-      {
-        "name": "Collagen Boost",
-        "description": "Supports natural collagen production for firmer and smoother skin."
+        "name": "Collagen Support",
+        "description": "Boosts collagen production to improve firmness and elasticity."
       }
     ],
     "ingredients": [
-      "ascorbic acid (vitamin c)",
-      "hyaluronic acid",
-      "aloe vera",
-      "witch hazel",
-      "jojoba oil",
-      "vitamin e",
-      "ferulic acid"
+      "ascorbic acid (vitamin C)",
+      "glycerin",
+      "aqua (water)",
+      "ferulic acid",
+      "niacinamide"
     ],
     "inorganicIngredients": [],
-    "ingredientsShort": ["vitamin c", "hyaluronic acid", "vitamin e"],
+    "ingredientsShort": ["vitamin C", "ferulic acid", "niacinamide"],
     "nutritionalInformation": {
-      "id": "2Z2kpc6kQZ8eg1gkIMc8ol",
-      "description": "Contains 20% stabilized vitamin C with additional hydrating and soothing ingredients.",
+      "id": "info-vitc-01",
+      "description": "Dermatologist-tested formula. Non-comedogenic.",
       "nutrientsInfo": {
-        "id": "40RnRfxjdI2L80usd9X9Ij",
-        "title": "Vitamin C Serum Label",
-        "description": "Label with ingredients and usage",
+        "id": "label-vitc-01",
+        "title": "Vitamin C Label",
+        "description": "",
         "url": "/vitamin-c.jpg",
         "file": {
           "details": {
@@ -132,21 +96,1243 @@
         }
       }
     },
-    "identifier": "serum-vitamin-c-serum",
-    "category": "serum",
-    "contentfulEntryId": "5Ytvr48KskbzAKD7JAyVwn",
-    "shopPriority": 55,
-    "product_id": 7608555274434,
+    "identifier": "serums-vitamin-c",
+    "category": "serums",
+    "contentfulEntryId": "vit-c-serum-01",
+    "shopPriority": 45,
+    "product_id": 8800000010001,
+    "variant_id": 42884140000001,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000010001",
+      "rating_average": 4.6,
+      "rating_count": 530
+    },
+    "market_prices": {
+      "full_price": 14.99,
+      "subscription_price": 11.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "hya-serum-01",
+    "name": "Hyaluronic Acid Serum",
+    "perks": "hydration",
+    "benefitsIntro": "Intensely hydrates and plumps your skin, leaving it supple and dewy all day.",
+    "mainFlavors": ["unscented", "light floral"],
+    "url": "/serums/hyaluronic-acid",
+    "cardDescription": "Boost moisture retention with this lightweight, fast-absorbing serum.",
+    "cardHighlightText": "Deep hydration for all skin types",
+    "productId": "serums__Hyaluronic_Acid",
+    "intro": "Formulated with multi-molecular weight hyaluronic acid to penetrate deeply and hydrate multiple layers of the skin.",
+    "suggestion": "Apply 2-3 drops to damp skin before moisturizer.",
+    "mixLiquidTwist": "Use after toner but before oils or creams.",
+    "allergies": "Fragrance-free, but always patch test if you have sensitive skin.",
+    "background": {
+      "id": "bg-hya-01",
+      "title": "Hyaluronic Acid Background",
+      "description": "Water molecules on skin surface",
+      "url": "/hyaluronic.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-hya-01",
+      "title": "Hyaluronic Acid Product Packaging",
+      "description": "Minimalist glass dropper bottle",
+      "url": "/hyaluronic.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-hya-01",
+      "title": "Hyaluronic Lifestyle Image",
+      "description": "Serum applied on glowing skin",
+      "url": "/hyaluronic.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Hydration",
+        "description": "Hyaluronic acid binds up to 1000x its weight in water, deeply hydrating skin."
+      },
+      {
+        "name": "Plumping",
+        "description": "Helps reduce the appearance of fine lines by plumping up the skin."
+      }
+    ],
+    "ingredients": [
+      "hyaluronic acid",
+      "glycerin",
+      "aqua (water)",
+      "panthenol",
+      "phenoxyethanol"
+    ],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["hyaluronic acid", "glycerin", "panthenol"],
+    "nutritionalInformation": {
+      "id": "info-hya-01",
+      "description": "Dermatologist-tested formula. Non-comedogenic.",
+      "nutrientsInfo": {
+        "id": "label-hya-01",
+        "title": "Hyaluronic Acid Label",
+        "description": "",
+        "url": "/hyaluronic.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "serums-hyaluronic-acid",
+    "category": "serums",
+    "contentfulEntryId": "hya-serum-01",
+    "shopPriority": 50,
+    "product_id": 8800000012345,
     "variant_id": 42884145381570,
     "is_sold_out": false,
     "junip_info": {
-      "remote_id": "7608555274434",
+      "remote_id": "8800000012345",
       "rating_average": 4.8,
-      "rating_count": 542
+      "rating_count": 645
     },
     "market_prices": {
-      "full_price": 28.0,
-      "subscription_price": 22.4,
+      "full_price": 12.99,
+      "subscription_price": 9.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "retinol-serum-01",
+    "name": "Retinol Serum",
+    "perks": "anti-aging",
+    "benefitsIntro": "Visibly reduce fine lines and improve skin texture with this powerful nightly serum.",
+    "mainFlavors": ["unscented"],
+    "url": "/serums/retinol",
+    "cardDescription": "Target signs of aging with gentle, effective retinol.",
+    "cardHighlightText": "Smooth, youthful skin",
+    "productId": "serums__Retinol",
+    "intro": "Formulated with stabilized retinol and nourishing botanicals to refine skin and reduce signs of aging.",
+    "suggestion": "Apply at night, 2-3 times per week. Follow with moisturizer.",
+    "mixLiquidTwist": "Use sunscreen daily while using retinol.",
+    "allergies": "Avoid during pregnancy. Patch test recommended.",
+    "background": {
+      "id": "bg-retinol-01",
+      "title": "Retinol Background",
+      "description": "Serum on a dropper with soft lighting",
+      "url": "/retinol.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-retinol-01",
+      "title": "Retinol Packaging",
+      "description": "Blue glass bottle",
+      "url": "/retinol.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-retinol-01",
+      "title": "Retinol Lifestyle Image",
+      "description": "Night routine serum",
+      "url": "/retinol.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Anti-aging",
+        "description": "Boosts cell turnover and reduces signs of aging like fine lines and wrinkles."
+      },
+      {
+        "name": "Texture Refinement",
+        "description": "Improves skin texture and reduces blemishes."
+      }
+    ],
+    "ingredients": [
+      "retinol",
+      "vitamin E",
+      "jojoba oil",
+      "aqua (water)",
+      "squalane"
+    ],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["retinol", "vitamin E", "squalane"],
+    "nutritionalInformation": {
+      "id": "info-retinol-01",
+      "description": "Start slow. Non-comedogenic. Use SPF during the day.",
+      "nutrientsInfo": {
+        "id": "label-retinol-01",
+        "title": "Retinol Label",
+        "description": "",
+        "url": "/retinol.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "serums-retinol",
+    "category": "serums",
+    "contentfulEntryId": "retinol-serum-01",
+    "shopPriority": 55,
+    "product_id": 8800000015678,
+    "variant_id": 42884145981570,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000015678",
+      "rating_average": 4.5,
+      "rating_count": 410
+    },
+    "market_prices": {
+      "full_price": 13.99,
+      "subscription_price": 10.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "lipbalm-berry-01",
+    "name": "Berry Bliss Lip Balm",
+    "perks": "hydration",
+    "benefitsIntro": "Deeply hydrates and protects lips with a natural berry flavor.",
+    "mainFlavors": ["mixed berries"],
+    "url": "lip-balms/berry-bliss",
+    "cardDescription": "Lock in moisture and enjoy soft, luscious lips all day.",
+    "cardHighlightText": "Rich in antioxidants",
+    "productId": "lipbalms__Berry_Bliss",
+    "intro": "Infused with shea butter and vitamin E for long-lasting hydration and a fruity berry scent.",
+    "suggestion": "Apply throughout the day whenever lips feel dry.",
+    "mixLiquidTwist": "Perfect under lipstick or alone for a natural shine.",
+    "allergies": "Contains nut derivatives (shea butter).",
+    "background": {
+      "id": "bg-berry-01",
+      "title": "Berry Bliss Background",
+      "description": "Lip balm with berries on a wooden table",
+      "url": "/berry-bliss.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-berry-01",
+      "title": "Berry Bliss Packaging",
+      "description": "Small tin with berry design",
+      "url": "/berry-bliss.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-berry-01",
+      "title": "Berry Bliss Lifestyle Image",
+      "description": "Lip balm next to fresh berries",
+      "url": "/berry-bliss.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Intense Hydration",
+        "description": "Provides deep, lasting moisture for soft and supple lips."
+      },
+      {
+        "name": "Antioxidant Protection",
+        "description": "Rich in antioxidants to help protect lips from environmental damage."
+      }
+    ],
+    "ingredients": [
+      "shea butter",
+      "coconut oil",
+      "beeswax",
+      "vitamin E",
+      "berry extract"
+    ],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["shea butter", "berry extract", "vitamin E"],
+    "nutritionalInformation": {
+      "id": "info-berry-01",
+      "description": "Natural ingredients. No synthetic fragrances.",
+      "nutrientsInfo": {
+        "id": "label-berry-01",
+        "title": "Berry Bliss Label",
+        "description": "",
+        "url": "/berry-bliss.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "lipbalms-berry-bliss",
+    "category": "lip_balms",
+    "contentfulEntryId": "lipbalm-berry-01",
+    "shopPriority": 40,
+    "product_id": 8800000023456,
+    "variant_id": 42884145981234,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000023456",
+      "rating_average": 4.8,
+      "rating_count": 280
+    },
+    "market_prices": {
+      "full_price": 5.99,
+      "subscription_price": 4.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "lipbalm-mint-01",
+    "name": "Mint Refresh Lip Balm",
+    "perks": "refreshing",
+    "benefitsIntro": "Cools, soothes and hydrates lips with a refreshing minty feel.",
+    "mainFlavors": ["peppermint"],
+    "url": "lip-balms/mint-refresh",
+    "cardDescription": "Give your lips a cooling boost of hydration.",
+    "cardHighlightText": "Cooling & soothing",
+    "productId": "lipbalms__Mint_Refresh",
+    "intro": "Formulated with peppermint oil and jojoba for a revitalizing, non-sticky finish.",
+    "suggestion": "Reapply as needed, especially before going outdoors.",
+    "mixLiquidTwist": "Pairs well with outdoor activities for wind protection.",
+    "allergies": "Contains natural essential oils.",
+    "background": {
+      "id": "bg-mint-01",
+      "title": "Mint Refresh Background",
+      "description": "Lip balm with fresh mint leaves",
+      "url": "lip-balms/mint-refresh.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-mint-01",
+      "title": "Mint Refresh Packaging",
+      "description": "Tin with green mint design",
+      "url": "/mint-refresh.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-mint-01",
+      "title": "Mint Refresh Lifestyle Image",
+      "description": "Lip balm with mint and snow",
+      "url": "/mint-refresh.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Cooling Effect",
+        "description": "Peppermint oil provides a refreshing, cooling sensation."
+      },
+      {
+        "name": "Hydration & Protection",
+        "description": "Nourishes lips and protects them from dryness and wind."
+      }
+    ],
+    "ingredients": ["jojoba oil", "beeswax", "peppermint oil", "vitamin E"],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["jojoba", "peppermint", "vitamin E"],
+    "nutritionalInformation": {
+      "id": "info-mint-01",
+      "description": "Natural mint oils. No parabens.",
+      "nutrientsInfo": {
+        "id": "label-mint-01",
+        "title": "Mint Refresh Label",
+        "description": "",
+        "url": "/mint-refresh.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "lipbalms-mint-refresh",
+    "category": "lip_balms",
+    "contentfulEntryId": "lipbalm-mint-01",
+    "shopPriority": 45,
+    "product_id": 8800000027890,
+    "variant_id": 42884145982345,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000027890",
+      "rating_average": 4.7,
+      "rating_count": 320
+    },
+    "market_prices": {
+      "full_price": 5.49,
+      "subscription_price": 4.49,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "lipbalm-vanilla-01",
+    "name": "Vanilla Comfort Lip Balm",
+    "perks": "nourishing",
+    "benefitsIntro": "Nourish dry lips with comforting vanilla and rich plant oils.",
+    "mainFlavors": ["vanilla"],
+    "url": "lip-balms/vanilla-comfort",
+    "cardDescription": "Soothe and repair with a silky, sweet vanilla formula.",
+    "cardHighlightText": "Comforting & softening",
+    "productId": "lipbalms__Vanilla_Comfort",
+    "intro": "Luxurious vanilla-scented balm with cocoa butter and almond oil for long-lasting nourishment.",
+    "suggestion": "Use day or night for ultra-soft lips.",
+    "mixLiquidTwist": "Ideal as an overnight lip mask.",
+    "allergies": "Contains almond oil (nuts).",
+    "background": {
+      "id": "bg-vanilla-01",
+      "title": "Vanilla Comfort Background",
+      "description": "Lip balm next to vanilla beans and flowers",
+      "url": "/vanilla-comfort.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-vanilla-01",
+      "title": "Vanilla Comfort Packaging",
+      "description": "Beige tin with vanilla pod illustration",
+      "url": "/vanilla-comfort.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-vanilla-01",
+      "title": "Vanilla Comfort Lifestyle Image",
+      "description": "Lip balm with vanilla pods and cozy fabric",
+      "url": "/vanilla-comfort.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Deep Nourishment",
+        "description": "Rich oils and butters restore dry, cracked lips."
+      },
+      {
+        "name": "Comforting Scent",
+        "description": "Natural vanilla scent provides a soothing experience."
+      }
+    ],
+    "ingredients": ["cocoa butter", "almond oil", "beeswax", "vanilla extract"],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["cocoa butter", "vanilla", "almond oil"],
+    "nutritionalInformation": {
+      "id": "info-vanilla-01",
+      "description": "Natural oils. No artificial fragrances.",
+      "nutrientsInfo": {
+        "id": "label-vanilla-01",
+        "title": "Vanilla Comfort Label",
+        "description": "",
+        "url": "/vanilla-comfort.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "lipbalms-vanilla-comfort",
+    "category": "lip_balms",
+    "contentfulEntryId": "lipbalm-vanilla-01",
+    "shopPriority": 50,
+    "product_id": 8800000025678,
+    "variant_id": 42884145983456,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000025678",
+      "rating_average": 4.9,
+      "rating_count": 360
+    },
+    "market_prices": {
+      "full_price": 5.99,
+      "subscription_price": 4.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "lipbalm-nude-01",
+    "name": "Nude Glow Lip Balm",
+    "perks": "tinted",
+    "benefitsIntro": "Hydrate with a subtle nude tint and a natural glossy finish.",
+    "mainFlavors": ["unscented"],
+    "url": "lip-balms/nude-glow",
+    "cardDescription": "Perfect blend of hydration and natural color.",
+    "cardHighlightText": "Sheer color + care",
+    "productId": "lipbalms__Nude_Glow",
+    "intro": "Tinted balm with botanical oils and natural pigments to enhance your lips’ natural tone.",
+    "suggestion": "Swipe once for hydration, build up for extra color.",
+    "mixLiquidTwist": "Doubles as a cheek tint for on-the-go freshness.",
+    "allergies": "Dermatologically tested, fragrance-free.",
+    "background": {
+      "id": "bg-nude-01",
+      "title": "Nude Glow Background",
+      "description": "Lip balm on nude fabric with subtle makeup brushes",
+      "url": "/nude-glow.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-nude-01",
+      "title": "Nude Glow Packaging",
+      "description": "Minimalist nude lip balm packaging",
+      "url": "/nude-glow.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-nude-01",
+      "title": "Nude Glow Lifestyle Image",
+      "description": "Lip balm next to nude-toned makeup products",
+      "url": "/nude-glow.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Tinted Hydration",
+        "description": "Moisturizes lips while providing a sheer, nude color."
+      },
+      {
+        "name": "Natural Gloss",
+        "description": "Delivers a subtle shine for a fresh, healthy look."
+      }
+    ],
+    "ingredients": [
+      "castor oil",
+      "beeswax",
+      "sunflower oil",
+      "natural pigments"
+    ],
+    "inorganicIngredients": [],
+    "ingredientsShort": ["castor oil", "natural tint", "sunflower oil"],
+    "nutritionalInformation": {
+      "id": "info-nude-01",
+      "description": "Clean formula. Multi-use balm.",
+      "nutrientsInfo": {
+        "id": "label-nude-01",
+        "title": "Nude Glow Label",
+        "description": "",
+        "url": "/nude-glow.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "lipbalms-nude-glow",
+    "category": "lip_balms",
+    "contentfulEntryId": "lipbalm-nude-01",
+    "shopPriority": 55,
+    "product_id": 8800000029999,
+    "variant_id": 42884145989999,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000029999",
+      "rating_average": 4.6,
+      "rating_count": 285
+    },
+    "market_prices": {
+      "full_price": 6.49,
+      "subscription_price": 5.49,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "gua-sha-rose-01",
+    "name": "Rose Quartz Gua Sha",
+    "perks": "self-care",
+    "benefitsIntro": "Promotes lymphatic drainage and reduces puffiness with calming rose quartz.",
+    "mainFlavors": [],
+    "url": "gua-sha/gua-sha-rose",
+    "cardDescription": "A gentle tool for sculpting and relaxing facial muscles.",
+    "cardHighlightText": "Calming & soothing",
+    "productId": "gua_sha__Rose_Quartz",
+    "intro": "Hand-carved rose quartz stone to elevate your skincare ritual and promote a glowing complexion.",
+    "suggestion": "Use daily with facial oil or serum.",
+    "mixLiquidTwist": "Store in the fridge for a refreshing morning boost.",
+    "allergies": "",
+    "background": {
+      "id": "bg-gua-rose-01",
+      "title": "Rose Quartz Gua Sha Background",
+      "description": "Rose quartz gua sha on marble background",
+      "url": "/gua-sha-rose.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-gua-rose-01",
+      "title": "Rose Quartz Packaging",
+      "description": "Elegant box for rose quartz gua sha",
+      "url": "/gua-sha-rose.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-gua-rose-01",
+      "title": "Rose Quartz Lifestyle Image",
+      "description": "Gua sha tool in a spa setting",
+      "url": "/gua-sha-rose.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Lymphatic Drainage",
+        "description": "Helps stimulate lymphatic flow to reduce puffiness and detoxify skin."
+      },
+      {
+        "name": "Facial Sculpting",
+        "description": "Enhances facial contours and promotes relaxation."
+      }
+    ],
+    "ingredients": ["rose quartz stone"],
+    "inorganicIngredients": ["rose quartz stone"],
+    "ingredientsShort": ["rose quartz"],
+    "nutritionalInformation": {
+      "id": "info-gua-rose-01",
+      "description": "Natural stone. Handle with care.",
+      "nutrientsInfo": {
+        "id": "label-gua-rose-01",
+        "title": "Rose Quartz Gua Sha Label",
+        "description": "",
+        "url": "/gua-sha-rose.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "gua-sha-rose-quartz",
+    "category": "gua_sha",
+    "contentfulEntryId": "gua-sha-rose-01",
+    "shopPriority": 60,
+    "product_id": 8800000034567,
+    "variant_id": 42884146012345,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000034567",
+      "rating_average": 4.8,
+      "rating_count": 150
+    },
+    "market_prices": {
+      "full_price": 18.99,
+      "subscription_price": 15.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "gua-sha-jade-01",
+    "name": "Jade Gua Sha",
+    "perks": "energizing",
+    "benefitsIntro": "Boost circulation and awaken your skin with traditional jade.",
+    "mainFlavors": [],
+    "url": "gua-sha/gua-sha-jade",
+    "cardDescription": "Energizing facial massage tool for a lifted appearance.",
+    "cardHighlightText": "Tones & revitalizes",
+    "productId": "gua_sha__Jade",
+    "intro": "Crafted from natural jade stone, this tool improves skin tone and promotes facial contouring.",
+    "suggestion": "Use upward strokes daily on clean skin.",
+    "mixLiquidTwist": "Pair with green tea serum for maximum glow.",
+    "allergies": "",
+    "background": {
+      "id": "bg-gua-jade-01",
+      "title": "Gua Sha Jade Background",
+      "description": "Jade gua sha tool on white background",
+      "url": "/gua-sha-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-gua-jade-01",
+      "title": "Gua Sha Jade Packaging",
+      "description": "Eco-friendly box for jade gua sha",
+      "url": "/gua-sha-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-gua-jade-01",
+      "title": "Gua Sha Jade Lifestyle Image",
+      "description": "Jade tool beside skincare bottles",
+      "url": "/gua-sha-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Circulation Boost",
+        "description": "Enhances blood flow for a revitalized complexion."
+      },
+      {
+        "name": "Facial Toning",
+        "description": "Supports lifting and contouring of facial features."
+      }
+    ],
+    "ingredients": ["jade stone"],
+    "inorganicIngredients": ["jade stone"],
+    "ingredientsShort": ["jade"],
+    "nutritionalInformation": {
+      "id": "info-gua-jade-01",
+      "description": "Natural jade stone. Clean with mild soap after use.",
+      "nutrientsInfo": {
+        "id": "label-gua-jade-01",
+        "title": "Jade Label",
+        "description": "",
+        "url": "/gua-sha-jade.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "gua-sha-jade",
+    "category": "gua_sha",
+    "contentfulEntryId": "gua-sha-jade-01",
+    "shopPriority": 65,
+    "product_id": 8800000034568,
+    "variant_id": 42884146056789,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000034568",
+      "rating_average": 4.7,
+      "rating_count": 130
+    },
+    "market_prices": {
+      "full_price": 17.99,
+      "subscription_price": 14.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "gua-sha-bian-01",
+    "name": "Bian Stone Gua Sha",
+    "perks": "detox",
+    "benefitsIntro": "Supports detoxification and relieves facial tension with ancient bian stone.",
+    "mainFlavors": [],
+    "url": "/gua-sha/bian",
+    "cardDescription": "Traditional bian stone for a deeper, detoxifying massage.",
+    "cardHighlightText": "Deep tension relief",
+    "productId": "gua_sha__Bian_Stone",
+    "intro": "A unique bian stone tool designed to stimulate acupressure points and detoxify the skin.",
+    "suggestion": "Massage 3-4 times a week focusing on jawline and cheeks.",
+    "mixLiquidTwist": "Use warm for a spa-like experience.",
+    "allergies": "",
+    "background": {
+      "id": "bg-gua-bian-01",
+      "title": "Gua Sha Bian Background",
+      "description": "Bian stone gua sha on linen fabric",
+      "url": "/gua-sha-bian.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-gua-bian-01",
+      "title": "Gua Sha Bian Packaging",
+      "description": "Traditional box for bian stone gua sha",
+      "url": "/gua-sha-bian.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-gua-bian-01",
+      "title": "Gua Sha Bian Lifestyle Image",
+      "description": "Bian stone tool in a wellness setting",
+      "url": "/gua-sha-bian.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Detoxification",
+        "description": "Helps flush out toxins and stimulate acupressure points."
+      },
+      {
+        "name": "Deep Tissue Relief",
+        "description": "Relieves facial tension and stress."
+      }
+    ],
+    "ingredients": ["bian stone"],
+    "inorganicIngredients": ["bian stone"],
+    "ingredientsShort": ["bian stone"],
+    "nutritionalInformation": {
+      "id": "info-gua-bian-01",
+      "description": "Natural stone. Rinse after each use.",
+      "nutrientsInfo": {
+        "id": "label-gua-bian-01",
+        "title": "Bian Stone Label",
+        "description": "",
+        "url": "/gua-sha-bian.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "gua-sha-bian-stone",
+    "category": "gua_sha",
+    "contentfulEntryId": "gua-sha-bian-01",
+    "shopPriority": 70,
+    "product_id": 8800000034569,
+    "variant_id": 42884146067890,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000034569",
+      "rating_average": 4.6,
+      "rating_count": 95
+    },
+    "market_prices": {
+      "full_price": 19.99,
+      "subscription_price": 16.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "face-roller-jade-01",
+    "name": "Jade Face Roller",
+    "perks": "cooling",
+    "benefitsIntro": "Reduces puffiness and boosts circulation with the natural coolness of jade.",
+    "mainFlavors": [],
+    "url": "/face-roller/jade",
+    "cardDescription": "A dual-ended roller for soothing and depuffing your skin.",
+    "cardHighlightText": "Cooling & brightening",
+    "productId": "face_roller__Jade",
+    "intro": "A handcrafted jade face roller to soothe the skin, improve elasticity, and enhance your glow.",
+    "suggestion": "Use morning and night after applying serum or moisturizer.",
+    "mixLiquidTwist": "Keep it chilled for extra depuffing power.",
+    "allergies": "",
+    "background": {
+      "id": "bg-roller-jade-01",
+      "title": "Jade Face Roller Background",
+      "description": "Jade face roller on a marble surface",
+      "url": "/face-roller-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-roller-jade-01",
+      "title": "Jade Face Roller Packaging",
+      "description": "Sustainable packaging for jade face roller",
+      "url": "/face-roller-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-roller-jade-01",
+      "title": "Jade Face Roller Lifestyle Image",
+      "description": "Jade roller in a skincare flatlay",
+      "url": "/face-roller-jade.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Depuffing",
+        "description": "Helps reduce under-eye bags and facial puffiness."
+      },
+      {
+        "name": "Radiance Boost",
+        "description": "Stimulates circulation for brighter skin."
+      }
+    ],
+    "ingredients": ["jade stone", "metal frame"],
+    "inorganicIngredients": ["jade stone", "metal"],
+    "ingredientsShort": ["jade", "metal"],
+    "nutritionalInformation": {
+      "id": "info-roller-jade-01",
+      "description": "Natural jade and metal roller. Clean with a soft cloth after use.",
+      "nutrientsInfo": {
+        "id": "label-roller-jade-01",
+        "title": "Jade Roller Label",
+        "description": "",
+        "url": "/face-roller-jade.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "face-roller-jade",
+    "category": "face_roller",
+    "contentfulEntryId": "face-roller-jade-01",
+    "shopPriority": 75,
+    "product_id": 8800000034570,
+    "variant_id": 42884146078901,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000034570",
+      "rating_average": 4.8,
+      "rating_count": 150
+    },
+    "market_prices": {
+      "full_price": 21.99,
+      "subscription_price": 18.99,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "face-roller-amethyst-01",
+    "name": "Amethyst Face Roller",
+    "perks": "calming",
+    "benefitsIntro": "Soothes stressed skin and promotes relaxation with the natural properties of amethyst.",
+    "mainFlavors": [],
+    "url": "/face-roller/amethyst",
+    "cardDescription": "A calming roller to reduce tension and enhance your skincare routine.",
+    "cardHighlightText": "Relax & recharge",
+    "productId": "face_roller__Amethyst",
+    "intro": "Crafted from genuine amethyst, this roller helps calm the skin and mind while improving circulation and tone.",
+    "suggestion": "Use with facial oil in slow, upward motions.",
+    "mixLiquidTwist": "Perfect for nighttime rituals to relax facial muscles.",
+    "allergies": "",
+    "background": {
+      "id": "bg-roller-amethyst-01",
+      "title": "Amethyst Face Roller Background",
+      "description": "Amethyst roller on a soft lavender background",
+      "url": "/face-roller-amethyst.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 1800,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "productPackaging": {
+      "id": "pkg-roller-amethyst-01",
+      "title": "Amethyst Face Roller Packaging",
+      "description": "Elegant packaging for amethyst face roller",
+      "url": "/face-roller-amethyst.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 656,
+            "height": 820
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "lifeStyleImage": {
+      "id": "life-roller-amethyst-01",
+      "title": "Amethyst Face Roller Lifestyle Image",
+      "description": "Amethyst roller on spa towel with skincare bottles",
+      "url": "/face-roller-amethyst.jpg",
+      "file": {
+        "details": {
+          "image": {
+            "width": 960,
+            "height": 1200
+          }
+        },
+        "contentType": "image/webp"
+      }
+    },
+    "benefits": [
+      {
+        "name": "Stress Relief",
+        "description": "Helps relax facial muscles and calm the mind."
+      },
+      {
+        "name": "Toning",
+        "description": "Supports lymphatic drainage and smooths skin tone."
+      }
+    ],
+    "ingredients": ["amethyst stone", "metal frame"],
+    "inorganicIngredients": ["amethyst stone", "metal"],
+    "ingredientsShort": ["amethyst", "metal"],
+    "nutritionalInformation": {
+      "id": "info-roller-amethyst-01",
+      "description": "Natural amethyst and metal roller. Wipe clean after each use.",
+      "nutrientsInfo": {
+        "id": "label-roller-amethyst-01",
+        "title": "Amethyst Roller Label",
+        "description": "",
+        "url": "/face-roller-amethyst.jpg",
+        "file": {
+          "details": {
+            "image": {
+              "width": 1196,
+              "height": 2408
+            }
+          },
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "identifier": "face-roller-amethyst",
+    "category": "face_roller",
+    "contentfulEntryId": "face-roller-amethyst-01",
+    "shopPriority": 80,
+    "product_id": 8800000034571,
+    "variant_id": 42884146078902,
+    "is_sold_out": false,
+    "junip_info": {
+      "remote_id": "8800000034571",
+      "rating_average": 4.7,
+      "rating_count": 98
+    },
+    "market_prices": {
+      "full_price": 22.99,
+      "subscription_price": 19.49,
       "currency": "EUR"
     }
   }
