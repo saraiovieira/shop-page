@@ -8,45 +8,15 @@ import {
 } from "react-icons/hi2";
 import styles from "./productCard.module.css";
 
-interface Product {
-  id: string;
-  name: string;
-  market_prices: {
-    full_price: number;
-  };
-  productPackaging: {
-    url: string;
-  };
-}
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  market_prices: {
-    full_price: number;
-  };
-  productPackaging: {
-    url: string;
-  };
-}
-
-interface ProductCardProps {
-  product: Product;
-}
-
-export default function ProductCard({
-  product,
-}: ProductCardProps): JSX.Element {
+export default function ProductCard({ product }) {
   const { cart, addToCart } = useCart();
   const productInCart = cart.find((item) => item.id === product.id);
 
   const addItemToCart = () => {
     if (!productInCart) {
-      const cartItem: CartItem = {
+      const cartItem = {
         ...product,
-        price: product.market_prices.full_price,
+
         quantity: 1,
       };
       addToCart(cartItem);

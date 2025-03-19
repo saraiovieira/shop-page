@@ -8,10 +8,10 @@ import styles from "./navbar.module.css";
 import Cart from "@/components/cart/cart";
 import { createPortal } from "react-dom";
 
-export default function Navbar(): React.ReactElement {
-  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
-  const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
-  const dialog = useRef<HTMLDialogElement | null>(null);
+export default function Navbar() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [modalRoot, setModalRoot] = useState(null);
+  const dialog = useRef(null);
 
   useEffect(() => {
     if (isCartOpen && dialog.current) {

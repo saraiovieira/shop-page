@@ -5,38 +5,12 @@ import React, {
   useState,
   useContext,
   useEffect,
-  ReactNode,
 } from "react";
 
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  market_prices: {
-    full_price: number;
-  };
-  productPackaging: {
-    url: string;
-  };
-}
+const CartContext = createContext(undefined);
 
-interface CartContextValue {
-  cart: CartItem[];
-  addToCart: (product: CartItem) => void;
-  updateItemQuantity: (productId: string, quantity: number) => void;
-}
-
-const CartContext = createContext<CartContextValue | undefined>(undefined);
-
-interface CartProviderProps {
-  children: ReactNode;
-}
-
-export default function CartProvider({
-  children,
-}: CartProviderProps): React.ReactNode {
-  const [cart, setCart] = useState<CartItem[]>([]);
+export default function CartProvider({ children }) {
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -47,13 +21,13 @@ export default function CartProvider({
     }
   }, []);
 
-  const saveCartToLocalStorage = (cart: CartItem[]) => {
+  const saveCartToLocalStorage = (cart) => {
     if (typeof window !== "undefined") {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   };
 
-  const addToCart = (product: CartItem) => {
+  const addToCart = (product) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
       const existingItemIndex = updatedCart.findIndex(
@@ -77,15 +51,14 @@ export default function CartProvider({
     });
   };
 
-
-  const updateItemQuantity = (productId: string, quantity: number) => {
+  const updateItemQuantity = (productId, quantity) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
       const updatedItemIndex = updatedCart.findIndex(
         (item) => item.id === productId
       );
 
-      let updatedItem =  { ...updatedCart[updatedItemIndex] };
+      let updatedItem = { ...updatedCart[updatedItemIndex] };
       updatedItem.quantity += quantity;
 
       if (updatedItem.quantity <= 0) {
@@ -108,7 +81,7 @@ export default function CartProvider({
   );
 }
 
-export const useCart = (): CartContextValue => {
+export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");

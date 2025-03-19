@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React from "react";
 import { useCart } from "@/context/CartContext";
 import {
   HiOutlineShoppingBag,
@@ -8,7 +8,7 @@ import {
 import styles from "./cart.module.css";
 import Image from "next/image";
 
-export default function Cart(): ReactNode {
+export default function Cart() {
   const { cart, updateItemQuantity } = useCart();
   const isEmptyCart = cart.length === 0;
 

@@ -3,7 +3,6 @@ import CartProvider from "@/context/CartContext";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
-import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +11,7 @@ export const metadata = {
   description: "A shop page that shows products",
 };
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
-export default function RootLayout({
-  children,
-}: RootLayoutProps): React.ReactNode {
+export default function RootLayout({ children }) {
   return (
     <CartProvider>
       <html lang="en">
