@@ -1,15 +1,12 @@
 import React from "react";
 import { useCart } from "@/context/CartContext";
-import {
-  HiOutlineShoppingBag,
-  HiMiniPlusCircle,
-  HiMiniMinusCircle,
-} from "react-icons/hi2";
-import styles from "./cart.module.css";
-import Image from "next/image";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import styles from "./Cart.module.css";
+import CartItem from "../CartItem/CartItem";
+import formatPrice from "@/utils/formatPrice";
 
 export default function Cart() {
-  const { cart, updateItemQuantity } = useCart();
+  const { cart } = useCart();
   const isEmptyCart = cart.length === 0;
 
   const totalPrice = cart.reduce(
@@ -36,44 +33,7 @@ export default function Cart() {
           <div className={styles.cartSummary}>
             <ul className={styles.items}>
               {cart.map((item) => (
-                <li className={styles.productsContainer} key={item.id}>
-                  <div className={styles.imgContainer}>
-                    <Image
-                      src={item.productPackaging.url}
-                      alt={item.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className={styles.infoContainer}>
-                    <div className={styles.descContainer}>
-                      <div className={styles.nameContainer}>
-                        <p>{item.name}</p>
-                      </div>
-                      <div className={styles.priceContainer}>
-                        <p>
-                          {new Intl.NumberFormat("en-US", {
-                            style: "currency",
-                            currency: "USD",
-                          }).format(item.market_prices.full_price)}
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <div className={styles.cartControls}>
-                        <HiMiniMinusCircle
-                          onClick={() => updateItemQuantity(item.id, -1)}
-                          className={styles.minusIcon}
-                        />
-                        <span className={styles.quantity}>{item.quantity}</span>
-                        <HiMiniPlusCircle
-                          onClick={() => updateItemQuantity(item.id, 1)}
-                          className={styles.plusIcon}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <CartItem key={item.id} item={item} />
               ))}
             </ul>
           </div>
@@ -81,12 +41,8 @@ export default function Cart() {
           <div className={styles.cartSummary}>
             <p className={styles.summaryLabel}>Total Price:</p>
             <span className={styles.summaryValue}>
-              {new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-              }).format(totalPrice)}
+              {formatPrice(totalPrice)}
             </span>
-
             <button className={styles.checkoutButton}>Checkout</button>
           </div>
         </>

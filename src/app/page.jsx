@@ -1,4 +1,4 @@
-import ProductCard from "@/components/productCard/productCard";
+import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./home.module.css";
 import products from "./data.json"; // adjust path if needed
 

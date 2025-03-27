@@ -6,7 +6,7 @@ import {
   HiOutlineShoppingBag,
   HiMiniPlusCircle,
 } from "react-icons/hi2";
-import styles from "./productCard.module.css";
+import styles from "./ProductCard.module.css";
 
 export default function ProductCard({ product }) {
   const { cart, addToCart } = useCart();
