@@ -1,34 +1,8 @@
-import ProductCard from "@/components/productCard/productCard";
+import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./home.module.css";
-interface Product {
-  id: string;
-  name: string;
-  market_prices: {
-    full_price: number;
-  };
-  productPackaging: {
-    url: string;
-  };
-}
+import products from "./data.json";
 
-type ProductsResponse = Product[];
-
-const getData = async (): Promise<ProductsResponse> => {
-  const { API_URL } = process.env;
-
-  const res = await fetch(`${API_URL}`, { cache: "no-store" });
-
-  if (!res.ok) {
-    throw new Error("Something went wrong while fetching data");
-  }
-
-  const products: ProductsResponse = await res.json();
-  return products;
-};
-
-export default async function Home(): Promise<JSX.Element> {
-  const products = await getData();
-
+const Home = () => {
   return (
     <main className={styles.container}>
       {products.map((product) => (
@@ -36,4 +10,6 @@ export default async function Home(): Promise<JSX.Element> {
       ))}
     </main>
   );
-}
+};
+
+export default Home;

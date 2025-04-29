@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import CartProvider from "@/context/CartContext";
 import "./globals.css";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +16,7 @@ interface RootLayoutProps {
   children: ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: RootLayoutProps): React.ReactNode {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <CartProvider>
       <html lang="en">
@@ -33,4 +31,6 @@ export default function RootLayout({
       </html>
     </CartProvider>
   );
-}
+};
+
+export default RootLayout;

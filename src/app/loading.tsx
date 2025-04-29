@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-
-export default function Loading(): ReactNode {
+const Loading = () => {
   return <div>Loading</div>;
-}
+};
+
+export default Loading;

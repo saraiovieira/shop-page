@@ -54,18 +54,13 @@ Several important design decisions were made to balance simplicity, scalability,
   npm install
 ```
 
-4. Create a .env file and add a variable `API_URL` for the data source
-```bash
-API_URL=https://www.kencko.com/api/v1/products/US?shop_domain=vip-kencko.myshopify.com
-```
-
-5. Run the development server:
+4. Run the development server:
 
 ```bash
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ## Contributions
 - Contributions, issues, and feature requests are welcome! Feel free to fork the repository and submit a pull request.

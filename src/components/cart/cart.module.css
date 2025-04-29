@@ -1,8 +1,6 @@
 .cartContainer {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
 }
 
 .cartTitle {
@@ -32,11 +30,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-}
-
-.productsContainer {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
@@ -46,62 +39,6 @@
   align-items: center;
   margin-top: 20px;
   gap: 20px;
-}
-
-.imgContainer {
-  width: 163px;
-  height: 111px;
-  position: relative;
-  border: 2px solid;
-  border-radius: 3px;
-  margin-bottom: 10px;
-}
-
-.infoContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.descContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.priceContainer {
-  display: flex;
-  gap: 10px;
-}
-
-.cartControls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.quantity {
-  padding: 5px 10px;
-  font-size: 18px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-
-.minusIcon,
-.plusIcon,
-.addToCartIcon {
-  cursor: pointer;
-  font-size: 24px;
-  transition: transform 0.2s ease;
-}
-
-.minusIcon:hover,
-.plusIcon:hover {
-  transform: scale(1.2);
 }
 
 .checkoutButton {

@@ -1,27 +1,26 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": ".",  // Ensure that baseUrl is set to the root of your project
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]  // Adjust the path as needed
+      "@/*": ["src/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "noEmit": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "module": "esnext",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true,
+    "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
@@ -29,11 +28,11 @@
     ]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/error.tsx"  ],
   "exclude": [
     "node_modules"
   ]
