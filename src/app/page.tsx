@@ -1,8 +1,8 @@
 import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./home.module.css";
-import products from "./data.json"; // adjust path if needed
+import products from "./data.json";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={styles.container}>
       {products.map((product) => (
@@ -10,4 +10,6 @@ export default function Home() {
       ))}
     </main>
   );
-}
+};
+
+export default Home;

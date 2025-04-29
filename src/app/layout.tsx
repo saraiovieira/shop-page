@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import CartProvider from "@/context/CartContext";
 import "./globals.css";
+import React, { ReactNode } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
@@ -11,7 +12,11 @@ export const metadata = {
   description: "A shop page that shows products",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <CartProvider>
       <html lang="en">
@@ -26,4 +31,6 @@ export default function RootLayout({ children }) {
       </html>
     </CartProvider>
   );
-}
+};
+
+export default RootLayout;

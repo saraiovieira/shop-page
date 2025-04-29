@@ -5,12 +5,35 @@ import React, {
   useState,
   useContext,
   useEffect,
+  ReactNode,
 } from "react";
 
-const CartContext = createContext(undefined);
+export interface CartItem {
+  id: string;
+  name: string;
+  productPackaging: {
+    url: string;
+  };
+  market_prices: {
+    full_price: number;
+  };
+  quantity: number;
+}
 
-export default function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
+interface CartContextType {
+  cart: CartItem[];
+  addToCart: (item: CartItem) => void;
+  updateItemQuantity: (productId: string, quantity: number) => void;
+}
+
+const CartContext = createContext<CartContextType | undefined>(undefined);
+
+interface CartProviderProps {
+  children: ReactNode;
+}
+
+const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -21,27 +44,24 @@ export default function CartProvider({ children }) {
     }
   }, []);
 
-  const saveCartToLocalStorage = (cart) => {
+  const saveCartToLocalStorage = (cart: CartItem[]) => {
     if (typeof window !== "undefined") {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   };
 
-  const addToCart = (product) => {
+  const addToCart = (product: CartItem) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
       const existingItemIndex = updatedCart.findIndex(
         (item) => item.id === product.id
       );
 
-      const existingItem = updatedCart[existingItemIndex];
-
-      if (existingItem) {
-        const updatedItem = {
+      if (existingItemIndex !== -1) {
+        updatedCart[existingItemIndex] = {
           ...updatedCart[existingItemIndex],
           quantity: updatedCart[existingItemIndex].quantity + 1,
         };
-        updatedCart[existingItemIndex] = updatedItem;
       } else {
         updatedCart.push({ ...product, quantity: 1 });
       }
@@ -51,12 +71,13 @@ export default function CartProvider({ children }) {
     });
   };
 
-  const updateItemQuantity = (productId, quantity) => {
+  const updateItemQuantity = (productId: string, quantity: number) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
       const updatedItemIndex = updatedCart.findIndex(
         (item) => item.id === productId
       );
+      if (updatedItemIndex === -1) return updatedCart;
 
       let updatedItem = { ...updatedCart[updatedItemIndex] };
       updatedItem.quantity += quantity;
@@ -73,15 +94,14 @@ export default function CartProvider({ children }) {
   };
 
   return (
-    <CartContext.Provider
-      value={{ cart, addToCart, updateItemQuantity }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, updateItemQuantity }}>
       {children}
     </CartContext.Provider>
   );
-}
+};
+export default CartProvider;
 
-export const useCart = () => {
+export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");

@@ -2,13 +2,25 @@
 
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
-import {
-  HiOutlineShoppingBag,
-  HiMiniPlusCircle,
-} from "react-icons/hi2";
+import { HiOutlineShoppingBag, HiMiniPlusCircle } from "react-icons/hi2";
 import styles from "./ProductCard.module.css";
 
-export default function ProductCard({ product }) {
+interface Product {
+  id: string;
+  name: string;
+  productPackaging: {
+    url: string;
+  };
+  market_prices: {
+    full_price: number;
+  };
+}
+
+interface ProductCardProps {
+  product: Product;
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { cart, addToCart } = useCart();
   const productInCart = cart.find((item) => item.id === product.id);
 
@@ -56,4 +68,6 @@ export default function ProductCard({ product }) {
       </div>
     </div>
   );
-}
+};
+
+export default ProductCard;

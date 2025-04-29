@@ -6,8 +6,8 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import styles from "./Navbar.module.css";
 import CartModal from "@/components/CartModal/CartModal";
 
-export default function Navbar() {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+const Navbar = () => {
+  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const { cart } = useCart();
   const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
 
@@ -30,4 +30,6 @@ export default function Navbar() {
       {isCartOpen && <CartModal onClose={() => setIsCartOpen(false)} />}
     </div>
   );
-}
+};
+
+export default Navbar;

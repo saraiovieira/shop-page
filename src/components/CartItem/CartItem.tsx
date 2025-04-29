@@ -1,11 +1,26 @@
-import React from "react";
 import { useCart } from "@/context/CartContext";
 import { HiMiniPlusCircle, HiMiniMinusCircle } from "react-icons/hi2";
 import styles from "./CartItem.module.css";
 import Image from "next/image";
 import formatPrice from "@/utils/formatPrice";
 
-const CartItem = ({ item }) => {
+export interface CartItemType {
+  id: string;
+  name: string;
+  productPackaging: {
+    url: string,
+  };
+  market_prices: {
+    full_price: number,
+  };
+  quantity: number;
+}
+
+interface CartItemProps {
+  item: CartItemType;
+}
+
+const CartItem: React.FC<CartItemProps> = ({ item }) => {
   const { updateItemQuantity } = useCart();
 
   return (

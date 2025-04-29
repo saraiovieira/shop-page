@@ -1,11 +1,10 @@
-import React from "react";
 import { useCart } from "@/context/CartContext";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import styles from "./Cart.module.css";
 import CartItem from "../CartItem/CartItem";
 import formatPrice from "@/utils/formatPrice";
 
-export default function Cart() {
+const Cart = () => {
   const { cart } = useCart();
   const isEmptyCart = cart.length === 0;
 
@@ -49,4 +48,6 @@ export default function Cart() {
       )}
     </div>
   );
-}
+};
+
+export default Cart;

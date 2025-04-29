@@ -3,9 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Cart from "@/components/Cart/Cart";
 import styles from "./CartModal.module.css";
-const CartModal = ({ onClose }) => {
-  const [isClient, setIsClient] = useState(false);
-  const dialogRef = useRef(null);
+
+interface CartModalProps {
+  onClose: () => void;
+}
+
+const CartModal: React.FC<CartModalProps> = ({ onClose }) => {
+  const [isClient, setIsClient] = useState<boolean>(false);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -35,7 +40,7 @@ const CartModal = ({ onClose }) => {
           <Cart />
         </div>
       </dialog>,
-      document.getElementById("modal")
+      document.getElementById("modal") as HTMLElement
     )
   );
 };
