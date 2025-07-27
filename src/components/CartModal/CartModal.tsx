@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 import Cart from "@/components/Cart/Cart";
 import styles from "./CartModal.module.css";
+import { HiX } from "react-icons/hi";
 
 interface CartModalProps {
   onClose: () => void;
@@ -16,32 +17,28 @@ const CartModal: React.FC<CartModalProps> = ({ onClose }) => {
     setIsClient(true);
   }, []);
 
-  useEffect(() => {
-    if (dialogRef.current && isClient) {
-      dialogRef.current.showModal();
-    }
-  }, [isClient]);
+  if (!isClient) return null;
 
-  const closeModal = () => {
-    if (dialogRef.current) {
-      dialogRef.current.close();
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose();
     }
-    onClose();
   };
 
-  return (
-    isClient &&
-    createPortal(
-      <dialog ref={dialogRef} className={styles.modal}>
-        <button className={styles.closeButton} onClick={closeModal}>
-          X
+  return createPortal(
+    <div className={styles.overlay} onClick={handleOverlayClick}>
+      <div className={styles.modal}>
+        <button
+          className={styles.closeButton}
+          onClick={onClose}
+          aria-label="Close cart modal"
+        >
+          <HiX />
         </button>
-        <div className={styles.modalContent}>
-          <Cart />
-        </div>
-      </dialog>,
-      document.getElementById("modal") as HTMLElement
-    )
+        <Cart />
+      </div>
+    </div>,
+    document.getElementById("modal") as HTMLElement
   );
 };
 

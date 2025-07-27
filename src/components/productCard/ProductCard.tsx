@@ -1,8 +1,13 @@
 "use client";
-
+import React, { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
-import { HiOutlineShoppingBag, HiMiniPlusCircle } from "react-icons/hi2";
+import {
+  HiCheckCircle,
+  HiExclamationCircle,
+  HiOutlineShoppingBag,
+  HiMiniPlusCircle,
+} from "react-icons/hi2";
 import styles from "./ProductCard.module.css";
 
 interface Product {
@@ -23,16 +28,28 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { cart, addToCart } = useCart();
   const productInCart = cart.find((item) => item.id === product.id);
+  const [feedback, setFeedback] = useState<{
+    message: string;
+    type: "success" | "warning" | "";
+  }>({ message: "", type: "" });
 
   const addItemToCart = () => {
+    let timer: ReturnType<typeof setTimeout>;
+
     if (!productInCart) {
       const cartItem = {
         ...product,
-
         quantity: 1,
       };
       addToCart(cartItem);
+      setFeedback({ message: "Added to cart!", type: "success" });
+    } else {
+      setFeedback({ message: "Already in cart", type: "warning" });
     }
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      setFeedback({ message: "", type: "" });
+    }, 1000);
   };
 
   return (
@@ -64,6 +81,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               title="Add to Cart"
             />
           </div>
+          {feedback.message && (
+            <div
+              className={`${styles.feedback} ${styles[feedback.type]}`}
+              role="alert"
+              aria-live="assertive"
+            >
+              {feedback.type === "success" ? (
+                <HiCheckCircle className={styles.icon} />
+              ) : (
+                <HiExclamationCircle className={styles.icon} />
+              )}
+              <span className={styles.text}>{feedback.message}</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

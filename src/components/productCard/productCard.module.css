@@ -1,5 +1,6 @@
 .container {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   position: relative;
 }
 
@@ -8,13 +9,13 @@
   height: 300px;
   display: flex;
   position: relative;
-  border: 2px solid;
+  border: 2px solid var(--text);
   border-radius: 4px;
   margin-bottom: 10px;
 }
 
 .img {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 .infoContainer {
@@ -31,6 +32,7 @@
 
 .cartIcons {
   position: relative;
+  cursor: pointer;
 }
 
 .shoppingIcon {
@@ -42,41 +44,73 @@
   position: absolute;
   right: 3px;
   bottom: 0px;
-  color: rgb(26, 23, 23);
+  color: var(--text);
 }
 
-.cartControls {
-  display: flex;
-  align-items: center;
-}
-
-.quantity {
-  padding: 5px 10px;
-  font-size: 18px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-
-.minusIcon,
-.plusIcon,
 .addToCartIcon {
   cursor: pointer;
   font-size: 24px;
   transition: transform 0.2s ease;
 }
 
-.minusIcon:hover,
-.plusIcon:hover {
-  transform: scale(1.2);
+.cartIcons:hover {
+  transform: scale(1.1);
 }
 
-.show {
-  display: flex;
+.cartIcons:hover .shoppingIcon,
+.cartIcons:hover .addToCartIcon {
+  color: var(--accent);
+}
+
+.cartIcons:hover .shoppingIcon {
+  box-shadow: 0 0 8px var(--accent);
+  border-radius: 4px;
+}
+
+.feedback {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 14px;
+  background: var(--accent);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 2;
   align-items: center;
-  justify-content: space-between;
+  gap: 3px;
+  display: flex;
+  animation: fadeSlide 0.5s ease;
 }
 
-.hide {
-  display: none;
+.success .icon {
+  color: var(--success);
+  font-size: 17px;
+}
+
+.success .text {
+  color: var(--success);
+}
+
+
+.warning .icon {
+  color: var(--warning);
+  font-size: 17px;
+}
+
+
+.warning .text {
+  color: var(--warning);
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

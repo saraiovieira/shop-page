@@ -6,6 +6,7 @@ import formatPrice from "@/utils/formatPrice";
 
 const Cart = () => {
   const { cart } = useCart();
+
   const isEmptyCart = cart.length === 0;
 
   const totalPrice = cart.reduce(
@@ -29,7 +30,7 @@ const Cart = () => {
 
       {!isEmptyCart && (
         <>
-          <div className={styles.cartSummary}>
+          <div>
             <ul className={styles.items}>
               {cart.map((item) => (
                 <CartItem key={item.id} item={item} />
