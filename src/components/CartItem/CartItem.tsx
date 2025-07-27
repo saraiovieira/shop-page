@@ -8,10 +8,10 @@ export interface CartItemType {
   id: string;
   name: string;
   productPackaging: {
-    url: string,
+    url: string;
   };
   market_prices: {
-    full_price: number,
+    full_price: number;
   };
   quantity: number;
 }
@@ -24,7 +24,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   const { updateItemQuantity } = useCart();
 
   return (
-    <li className={styles.productsContainer} key={item.id}>
+    <li className={styles.productsContainer}>
       <div className={styles.imgContainer}>
         <Image
           src={item.productPackaging.url}
@@ -44,15 +44,20 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
         </div>
         <div>
           <div className={styles.cartControls}>
-            <HiMiniMinusCircle
+            <button
               onClick={() => updateItemQuantity(item.id, -1)}
               className={styles.minusIcon}
-            />
+            >
+              <HiMiniMinusCircle />
+            </button>
             <span className={styles.quantity}>{item.quantity}</span>
-            <HiMiniPlusCircle
-              onClick={() => updateItemQuantity(item.id, 1)}
+            <button
               className={styles.plusIcon}
-            />
+              onClick={() => updateItemQuantity(item.id, 1)}
+              aria-label={`Increase quantity of ${item.name}`}
+            >
+              <HiMiniPlusCircle />
+            </button>
           </div>
         </div>
       </div>

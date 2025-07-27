@@ -1,6 +1,9 @@
 :root {
   --bg: #fcf9f6;
-  --text: #212529;
+  --text: #2d2d2d;
+  --accent: #c99810;
+  --warning: #392902;
+  --success: #153616;
 }
 
 * {
